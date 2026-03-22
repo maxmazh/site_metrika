@@ -238,7 +238,7 @@ p.description {
     max-width: 1400px;
     margin: 0 auto;
     height: 717px;
-    background-image: url('/resources/bad.png');
+    background-image: url('../resources/bad.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -279,7 +279,7 @@ p.description {
     margin-bottom: 12px;
     width: 24px;
     height: 24px;
-    background-image: url('/resources/ic_phone.png');
+    background-image: url('../resources/ic_phone.png');
     background-size: cover;
     background-position: center;
 }
