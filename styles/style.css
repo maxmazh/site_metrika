@@ -1,3 +1,5 @@
+/* @import '/footer.css'; */
+
 html {
     scroll-behavior: smooth;
 }
@@ -14,12 +16,12 @@ body {
     padding-right: 125px;
     padding-top: 33px;
     box-sizing: border-box;
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
     background: #ffffff;
 }
 
 h1 {
-    width: 956px;
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
@@ -39,8 +41,7 @@ h2 {
 
 p.description {
     margin-bottom: 30px;
-    width: 1048px;
-    height: 366px;
+    width: 91%;
     color: #121212;
     font-size: 45px;
     font-style: normal;
@@ -49,7 +50,7 @@ p.description {
     letter-spacing: -1.35px;
 }
 
-.nav_container {
+/* .nav_container {
     padding-bottom: 70px;
 }
 
@@ -89,15 +90,15 @@ p.description {
     text-transform: uppercase;
     text-decoration: underline rgba(18, 18, 18, 1) 1px;
     text-underline-offset: 7px;
-}
+} */
 
 .design1 {
     position: relative;
     margin-top: 30px;
-    width: 1150px;
+    width: 100%;
     height: 500px;
     background-image: url('../resources/design1.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -105,7 +106,7 @@ p.description {
     position: absolute;
     left: 40px;
     bottom: 40px;
-    width: 430px;
+    width: 37%;
     color: #FFF;
     font-size: 20px;
     font-weight: 400;
@@ -121,8 +122,6 @@ p.description {
 
 .btn1 {
     padding: 20px 40px;
-    width: 255px;
-    height: 67px;
     display: inline-flex;
     align-items: flex-start;
     gap: 10px;
@@ -136,6 +135,7 @@ p.description {
     line-height: normal;
     letter-spacing: -0.6px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .project {
@@ -143,8 +143,8 @@ p.description {
 }
 
 .project__img {
-    width: 1150px;
-    height: 450px;
+    display: block;
+    width: 100%;
 }
 
 .project__title {
@@ -169,6 +169,7 @@ p.description {
 }
 
 .all_project_btn {
+    display: inline-block;
     margin-bottom: 150px;
     width: 100%;
     height: 153px;
@@ -180,9 +181,10 @@ p.description {
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 153px;
     letter-spacing: -0.9px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .all_project_btn:hover {
@@ -191,14 +193,24 @@ p.description {
 }
 
 .section_black {
-    margin: 0 auto;
     background-color: #121212;
-    width: 1400px;
+    width: 100%;
 }
 
 .content {
+    margin: 0 auto;
+    max-width: 1400px;
     box-sizing: border-box;
     padding: 150px 125px 150px 125px;
+}
+
+.services_wrapepr {
+    margin-bottom: 104px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 81px;
 }
 
 .services__name {
@@ -211,13 +223,13 @@ p.description {
 }
 
 .list_services {
-    margin-bottom: 60px;
+    position: relative;
+    width: calc(50% - 5.5px);
 }
 
 .services__img {
-    margin-bottom: 13px;
-    width: 1150px;
-    height: 270px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .services__title {
@@ -226,14 +238,86 @@ p.description {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    letter-spacing: -0.75px;
+}
+
+.services_label {
+    padding: 5px 20px 5px 20px;
+    position: absolute;
+    top: 31.5px;
+    left: 30px;
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.66px;
+    border-radius: 5px;
+    background-color: #AD1818;
+}
+
+.btn_order_service {
+    display: inline-block;
+    width: 100%;
+    height: 153px;
+    line-height: 153px;
+    border-radius: 5px;
+    background-color: #AD1818;
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
     letter-spacing: -0.9px;
+    text-decoration: none;
 }
 
-.list_services:nth-last-child(1) {
-    margin-bottom: 0px;
+.btn_order_service:hover {
+    background-color: #FFF;
+    color: #AD1818;
 }
 
-.wrapper_bad {
+.reviews {
+    padding-top: 117px;
+    padding-bottom: 150px;
+    background-color: #ffffff;
+}
+
+.list_reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 80px;
+}
+
+.box-review {
+    width: calc(50% - 25px);
+}
+
+.box-review:last-child:nth-child(2n+1) {
+    width: 75%;
+}
+
+.review_title {
+    margin-bottom: 14px;
+    color: #000;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.35px;
+}
+
+.review_text {
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.66px;
+}
+
+/* .wrapper_bad {
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
@@ -345,8 +429,222 @@ p.description {
     line-height: normal;
     letter-spacing: -0.6px;
     opacity: 0.5;
+} */
+
+/* @media (max-width: 1199px) {
+    .container {
+        width: 100%;
+        padding-left: 125px;
+        padding-right: 125px;
+        padding-top: 33px;
+    }
+} */
+
+@media (max-width: 959px) {
+    .container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 33px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+    
+    .design1_text {
+        left: 40px;
+        bottom: 30px;
+        width: 47%;
+    }
+
+    p.description {
+        width: 80%;
+        font-size: 35px;
+    }
+
+    .project {
+        margin-bottom: 80px;
+    }
+
+    .project__title {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .all_project_btn {
+        margin-bottom: 100px;
+        font-size: 30px;
+    }
+
+    .content {
+        padding: 150px 15px 120px 15px;
+    }
+    
+    .services_wrapepr {
+        margin-bottom: 80px;
+    }
+
+    .services__name {
+        margin-bottom: 30px;
+    }
+
+    .list_services {
+        width: calc(50% - 5px);
+    }
+
+    .services__title {
+        font-size: 25px;
+    }
+
+    .services_label {
+        font-size: 20px;
+    }
+
+    .reviews {
+        padding-top: 87px;
+        padding-bottom: 120px;
+    }
+
+    .box-review {
+        width: calc(50% - 5px);
+    }
+
+    .review_title {
+        margin-bottom: 25px;
+        font-size: 35px;
+    }
+
+    .review_text {
+        font-size: 20px;
+    }
+
 }
 
+@media (max-width: 449px) {
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 31px;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 31px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .design1 {
+        margin-top: 25px;
+        height: 304px;
+        background-image: url('../resources/design1_mobile.png');
+        background-size: cover;
+        background-position: 30%;
+    }
+
+    .design1_text {
+        left: 15px;
+        bottom: 15px;
+        font-size: 16px;
+        width: 80%;
+    }
+
+    p.description {
+        width: 95%;
+        font-size: 22px;
+    }
+
+    .btn1 {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    .project {
+        margin-bottom: 49px;
+    }
+
+    .project__title {
+        font-size: 18px;
+    }
+
+    .project__link {
+        font-size: 16px;
+    }
+
+    .all_project_btn {
+        margin-bottom: 80px;
+        height: 100px;
+        font-size: 22px;
+        line-height: 100px;
+    }
+
+    .content {
+        padding: 80px 12px 80px 12px;
+    }
+    
+    .services_wrapepr {
+        margin-bottom: 60px;
+        gap: 60px;
+    }
+
+    .services__name {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .list_services {
+        width: 100%;
+    }
+
+    .services__title {
+        font-size: 18px;
+    }
+
+    .services_label {
+        top: 24px;
+        left: 24px;
+        font-size: 14px;
+    }
+
+    .btn_order_service {
+        height: 100px;
+        line-height: 100px;
+        border-radius: 3.8px;
+        font-size: 22px;
+        letter-spacing: -0.6px;
+    }
+
+    .reviews {
+        padding-top: 47px;
+        padding-bottom: 80px;
+    }
+
+    .list_reviews {
+        flex-direction: column;
+    }
+
+    .box-review {
+        width: 100%;
+    }
+
+    .box-review:last-child:nth-child(2n+1) {
+        width: 100%;
+    }
+
+    .review_title {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .review_text {
+        font-size: 16px;
+    }
+
+}
 
 
 
